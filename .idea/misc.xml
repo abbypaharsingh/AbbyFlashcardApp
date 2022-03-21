@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/omgki/AndroidStudioProjects/AbbysFlashcardApp/app/src/main/res/drawable/icon_add.xml" value="0.1" />
+        <entry key="..\:/Users/omgki/AndroidStudioProjects/AbbysFlashcardApp/app/src/main/res/drawable/icon_cancel.xml" value="0.1" />
+        <entry key="..\:/Users/omgki/AndroidStudioProjects/AbbysFlashcardApp/app/src/main/res/drawable/icon_save.xml" value="0.163" />
+        <entry key="..\:/Users/omgki/AndroidStudioProjects/AbbysFlashcardApp/app/src/main/res/layout/activity_add_card.xml" value="0.1" />
         <entry key="..\:/Users/omgki/AndroidStudioProjects/AbbysFlashcardApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>
     </option>
