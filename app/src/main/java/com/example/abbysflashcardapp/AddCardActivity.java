@@ -21,6 +21,8 @@ public class AddCardActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.d("debug3", "puppy");
+                Intent intent = new Intent(AddCardActivity.this, MainActivity.class);
+                AddCardActivity.this.startActivity(intent);
                 finish();
             }
         });
