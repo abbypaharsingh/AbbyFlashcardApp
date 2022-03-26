@@ -27,14 +27,24 @@
 
     <ImageView
         android:id="@+id/flashcard_add_question_button"
-        android:layout_width="107dp"
-        android:layout_height="76dp"
+        android:layout_width="95dp"
+        android:layout_height="65dp"
         android:layout_below="@+id/flashcard_question_textview"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="239dp"
-        android:layout_marginEnd="19dp"
+        android:layout_marginTop="217dp"
+        android:layout_marginEnd="25dp"
         android:layout_marginBottom="50dp"
         android:src="@drawable/icon_add"
         app:tint="@color/black" />
+
+    <ImageView
+        android:id="@+id/flashcard_next_question_button"
+        android:layout_width="50dp"
+        android:layout_height="76dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="239dp"
+        android:src="@drawable/icon_next" />
 
 </RelativeLayout>

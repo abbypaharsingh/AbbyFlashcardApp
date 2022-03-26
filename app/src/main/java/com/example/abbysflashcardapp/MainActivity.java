@@ -10,9 +10,18 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.material.snackbar.Snackbar;
+
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
       TextView flashcardQuestion;
       TextView flashcardAnswer;
+
+    FlashcardDatabase flashcardDatabase;
+    List<Flashcard> allFlashcards;
+    int cardIndex = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,8 +55,41 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, 100);
 
             }
+
+
         });
+        flashcardDatabase = new FlashcardDatabase(getApplicationContext());
+        allFlashcards = flashcardDatabase.getAllCards();
+
+        if (allFlashcards != null && allFlashcards.size() > 0) {
+            Flashcard firstCard = allFlashcards.get(0);
+            flashcardQuestion.setText(firstCard.getQuestion());
+            flashcardAnswer.setText(firstCard.getAnswer());
+
+
         }
+
+        findViewById(R.id.flashcard_next_question_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (allFlashcards.size() == 0)
+                    return;
+                cardIndex += 1;
+
+               if(cardIndex>=allFlashcards.size()){
+                   Snackbar.make(view,
+                           "You've reached the end of the cards! Going back to the start.",
+                                   Snackbar.LENGTH_SHORT)
+                           .show();
+                   cardIndex=0;// reset index so user can go back to the beginning of cards
+               }
+                Flashcard currentCard = allFlashcards.get(cardIndex);
+                flashcardQuestion.setText(currentCard.getQuestion());
+                flashcardAnswer.setText(currentCard.getAnswer());
+
+            }
+        });
+    }
 
      @Override
        protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data){
@@ -64,7 +106,10 @@ public class MainActivity extends AppCompatActivity {
                     flashcardQuestion.setText(questionString);
                     flashcardAnswer.setText(answerString);
 
+                    flashcardDatabase.insertCard(new Flashcard(questionString, answerString));
+                    allFlashcards = flashcardDatabase.getAllCards();
                 }
             }
         }
+
 }
