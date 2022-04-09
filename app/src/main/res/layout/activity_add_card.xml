@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddCardActivity">
+    tools:context=".AddCardActivity"
+    android:background="#58cc02">
 
     <EditText
         android:id="@+id/flashcard_question_edit_text"
@@ -15,7 +16,8 @@
         android:layout_marginTop="-106dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:hint="Enter New Question Here" />
+        android:hint="Enter New Question Here"
+        android:background="#ffffff"/>
 
     <EditText
         android:id="@+id/flashcard_answer_edit_text"
@@ -27,7 +29,8 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="490dp"
         android:hint="Enter Answer Here"
-        android:inputType="textMultiLine" />
+        android:inputType="textMultiLine"
+        android:background="#ffffff"/>
 
     <ImageView
         android:id="@+id/flashcard_cancel_button"
@@ -38,7 +41,8 @@
         android:layout_marginTop="636dp"
         android:layout_marginEnd="7dp"
         android:layout_marginBottom="50dp"
-        android:src="@drawable/icon_cancel" />
+        android:src="@drawable/icon_cancel"
+        />
 
     <ImageView
         android:id="@+id/flashcard_save_button"

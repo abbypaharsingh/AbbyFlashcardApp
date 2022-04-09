@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#58cc02">
+
 
     <TextView
         android:id="@+id/flashcard_question_textview"
@@ -13,7 +15,8 @@
         android:layout_marginTop="200dp"
         android:gravity="center"
         android:text="Who discovered electricity?"
-        android:textSize="40sp" />
+        android:textSize="40sp"
+        android:background="#ffffff"/>
 
     <TextView
         android:id="@+id/flashcard_answer_textview"
@@ -23,7 +26,8 @@
         android:gravity="center"
         android:text="Benjamin Franklin"
         android:textSize="40sp"
-        android:visibility="invisible" />
+        android:visibility="invisible"
+        android:background="#ffffff"/>
 
     <ImageView
         android:id="@+id/flashcard_add_question_button"
